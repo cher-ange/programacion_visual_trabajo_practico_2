@@ -54,10 +54,16 @@ public class Main {
     }
 
     private static void printAllProducts(ArrayList<Product> products) {
-        Helper.printMessage("Mostrando todos los productos disponibles");
-        for (Product product : products) {
-            Helper.printMessage(product.toString());
+
+        if (products.isEmpty()) {
+            Helper.printErrorMessage("No se encuentran productos registrados");
+        } else {
+            Helper.printMessage("Mostrando todos los productos disponibles");
+            for (Product product : products) {
+                Helper.printMessage(product.toString());
+            }
         }
+
     }
 
     private static void modifyProductByCode(ArrayList<Product> products) {
