@@ -1,20 +1,19 @@
 package ar.edu.unju.fi.exercise1.model;
 
+import java.util.Objects;
+
 /**
  * @author Gutierrez Angel Gonzalo
  * @version 1.0
  */
 public class Product {
 
-    //#region Attributes
     private Integer code;
     private String description;
     private Double unitPrice;
     private ManufacturingOrigin manufacturingOrigin;
     private Category category;
-    //#endregion
 
-    //#region Constructors
     public Product() {
     }
 
@@ -30,9 +29,7 @@ public class Product {
         this.manufacturingOrigin = manufacturingOrigin;
         this.category = category;
     }
-    //#endregion
 
-    //#region Getters and Setters
     public Integer getCode() {
         return code;
     }
@@ -72,9 +69,20 @@ public class Product {
     public void setCategory(Category category) {
         this.category = category;
     }
-    //#endregion
 
-    //#region Overriding methods
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        Product product = (Product) object;
+        return Objects.equals(code, product.code);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(code);
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -85,5 +93,4 @@ public class Product {
                 ", category=" + category +
                 '}';
     }
-    //#endregion
 }
