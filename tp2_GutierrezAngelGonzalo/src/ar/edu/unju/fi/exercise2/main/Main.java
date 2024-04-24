@@ -110,10 +110,10 @@ public class Main {
 
         while (true) {
             positiveIntegerValue = Helper.getInteger(message);
-            if (positiveIntegerValue >= 0) {
+            if (positiveIntegerValue > 0) {
                 return positiveIntegerValue;
             } else {
-                Helper.printErrorMessage("Entrada no válida, por favor introduce un número positivo o cero");
+                Helper.printErrorMessage("Entrada no válida, por favor introduce un número positivo");
             }
         }
     }
@@ -161,7 +161,7 @@ public class Main {
             detail = Helper.SCANNER.nextLine();
 
             if (detail.isEmpty()) {
-                Helper.printErrorMessage("Entrada no válida. Por favor introduce una descripción.");
+                Helper.printErrorMessage("Entrada no válida, por favor introduce una descripción");
             } else {
                 return detail;
             }

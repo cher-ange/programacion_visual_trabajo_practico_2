@@ -7,11 +7,8 @@ import java.util.Scanner;
  */
 public class Helper {
 
-    //#region Static objects
     public static final Scanner SCANNER = new Scanner(System.in);
-    //#endregion
 
-    //#region Byte
     public static Byte getByte(final String inputMessage, final String errorMessage) {
         byte byteValue;
 
@@ -27,11 +24,9 @@ public class Helper {
     }
 
     public static Byte getByte(final String inputMessage) {
-        return getByte(inputMessage, "Entrada no válida. Por favor ingrese un número entero.");
+        return getByte(inputMessage, "Entrada no válida, por favor introduce un número entero");
     }
-    //#endregion
 
-    //#region Integer
     public static Integer getInteger(final String inputMessage, final String errorMessage) {
         int integerValue;
 
@@ -47,11 +42,9 @@ public class Helper {
     }
 
     public static Integer getInteger(final String inputMessage) {
-        return getInteger(inputMessage, "Entrada no válida. Por favor ingrese un número entero.");
+        return getInteger(inputMessage, "Entrada no válida, por favor introduce un número entero");
     }
-    //#endregion
 
-    //#region Messages
     public static void printMessage(final String message) {
         System.out.println(message);
     }
@@ -63,5 +56,4 @@ public class Helper {
     public static void printErrorMessage(final String message) {
         System.out.println("ERROR: " + message);
     }
-    //#endregion
 }
