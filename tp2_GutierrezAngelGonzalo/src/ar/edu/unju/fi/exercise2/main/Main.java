@@ -105,7 +105,7 @@ public class Main {
         return events.stream().filter(event -> event.getCode().equals(code)).findFirst();
     }
 
-    public static int getEventCode(final String message) {
+    private static int getEventCode(final String message) {
         int positiveIntegerValue;
 
         while (true) {
@@ -131,7 +131,7 @@ public class Main {
         }
     }
 
-    public static int getEventDay(final String message, final Month month) {
+    private static int getEventDay(final String message, final Month month) {
         int day;
 
         while (true) {
@@ -144,7 +144,7 @@ public class Main {
         }
     }
 
-    public static boolean dayOfMonthIsValid(final int day, Month month) {
+    private static boolean dayOfMonthIsValid(final int day, Month month) {
         switch (month) {
             case ENERO, MARZO, MAYO, JULIO, AGOSTO, OCTUBRE, DICIEMBRE -> { return day <= 31; }
             case FEBRERO -> { return day <= 29; }
@@ -153,7 +153,7 @@ public class Main {
         }
     }
 
-    public static String getEventDetail(final String message) {
+    private static String getEventDetail(final String message) {
         String detail;
 
         while (true) {
