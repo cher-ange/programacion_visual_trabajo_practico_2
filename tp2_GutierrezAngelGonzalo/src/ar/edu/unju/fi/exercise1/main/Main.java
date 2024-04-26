@@ -93,7 +93,7 @@ public class Main {
         return products.stream().filter(product -> product.getCode().equals(code)).findFirst();
     }
 
-    public static int getProductCode(final String message) {
+    private static int getProductCode(final String message) {
         int positiveIntegerValue;
 
         while (true) {
@@ -106,7 +106,7 @@ public class Main {
         }
     }
 
-    public static String getProductDescription(final String message) {
+    private static String getProductDescription(final String message) {
         String description;
 
         while (true) {
@@ -121,7 +121,7 @@ public class Main {
         }
     }
 
-    public static double getProductUnitPrice(final String message) {
+    private static double getProductUnitPrice(final String message) {
         double positiveIntegerValue;
 
         while (true) {
